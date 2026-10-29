@@ -1,4 +1,6 @@
-## Partitioning and Formatting a Disk in Windows
+## Disk Partitioning & Formatting in Windows
+
+---
 
 ### Overview
 
@@ -32,12 +34,13 @@ In this lab, I practiced:
 This lab focuses on managing disk storage in Windows, including bringing a disk online, shrinking an existing partition, creating a new volume, assigning a drive letter, and formatting the new volume.
 
 ---
+---
 
-## 1. Start the Windows Lab
+### 1. Start the Windows Lab
 
 The first step was to start the lab.
 
-### Steps
+#### Steps
 
 1. Click the green **Start Lab** button.
 2. After the lab starts, click **Open Windows VM**.
@@ -46,7 +49,7 @@ The first step was to start the lab.
 
 ---
 
-## 2. Understanding Windows Disk Partitions
+### 2. Understanding Windows Disk Partitions
 
 Windows commonly uses a primary partition containing:
 
@@ -68,11 +71,11 @@ In this lab, an additional disk was divided into two partitions.
 
 ---
 
-## 3. Open Disk Management
+### 3. Open Disk Management
 
 Windows provides disk management tools through the GUI.
 
-### Steps
+#### Steps
 
 **1.** Click the **Start** button.
 **2.** Open **Control Panel**.
@@ -115,13 +118,13 @@ The Disk Management console allows you to manage storage devices and partitions.
 
 ---
 
-## 4. Bring the Disk Online
+### 4. Bring the Disk Online
 
 The system had two disks.
 
 One of the disks contained unallocated space and was marked **Offline**.
 
-### Steps
+#### Steps
 
 **1.** Locate the offline disk in Disk Management.
 **2.** Right-click the left portion of the disk.
@@ -146,13 +149,13 @@ The lab then uses this disk for additional partitioning.
 
 ---
 
-## 5. Shrink the Existing Volume
+### 5. Shrink the Existing Volume
 
 The disk was already allocated to the **D:** partition.
 
 To create another partition, the existing volume needed to be reduced.
 
-### Steps
+#### Steps
 
 **1.** Right-click the **D:** volume.
 
@@ -186,11 +189,11 @@ The lab uses the 20,480 MB shrink amount to create additional space for another 
 
 ---
 
-## 6. Create a New Simple Volume
+### 6. Create a New Simple Volume
 
 After shrinking the existing volume, unallocated space becomes available.
 
-### Steps
+#### Steps
 
 **1.** Right-click the unallocated space.
 
@@ -214,13 +217,13 @@ Next
 
 ---
 
-## 7. Select the Volume Size
+### 7. Select the Volume Size
 
 The wizard asks for the size of the new partition.
 
 The lab instructs you to accept the default value so that the new partition uses all remaining space.
 
-### Steps
+#### Steps
 
 **1.** Accept the default volume size.
 
@@ -234,7 +237,7 @@ Next
 
 ---
 
-## 8. Assign Drive Letter
+### 8. Assign Drive Letter
 
 The new partition needs a drive letter.
 
@@ -244,7 +247,7 @@ The lab specifies:
 E:
 ```
 
-### Steps
+#### Steps
 
 **1.** Ensure the drive letter is:
 
@@ -260,11 +263,11 @@ Next
 
 ---
 
-## 9. Configure the File System
+### 9. Configure the File System
 
 The next section of the wizard allows you to select the file system and provide a partition label.
 
-### Steps
+#### Steps
 
 **1.** Select the default partition format.
 
@@ -280,7 +283,7 @@ The lab then proceeds to the final stage of the wizard.
 
 ---
 
-## 10. Complete the New Simple Volume Wizard
+### 10. Complete the New Simple Volume Wizard
 
 Before completing the wizard, verify that the drive letter is:
 
@@ -316,11 +319,11 @@ E: 20 GB
 
 ---
 
-## 11. Format the E: Partition
+### 11. Format the E: Partition
 
 The next task was to format the **E:** partition with a different file system.
 
-### Important Warning
+#### Important Warning
 
 Formatting is a **destructive operation**.
 
@@ -330,9 +333,9 @@ Always back up important data before modifying or formatting partitions on a liv
 
 ---
 
-## 12. Select FAT32
+### 12. Select FAT32
 
-### Steps
+#### Steps
 
 **1.** Right-click the:
 
@@ -366,11 +369,11 @@ OK
 
 ---
 
-## 13. Confirm Formatting
+### 13. Confirm Formatting
 
 Windows displays a warning explaining that formatting will erase all data on the partition.
 
-### Steps
+#### Steps
 
 **1.** Review the warning.
 
@@ -384,7 +387,7 @@ The partition is then formatted using the selected file system.
 
 ---
 
-## 14. Final Disk Configuration
+### 14. Final Disk Configuration
 
 After formatting was completed, the final disk configuration contained:
 
@@ -404,10 +407,11 @@ The lab was therefore successfully completed.
 ![17](https://i.imgur.com/gIzxlUI.png)
 
 ---
+---
 
-## Key Concepts
+### Key Concepts
 
-### Partition
+#### Partition
 
 A **partition** is a logical section of a physical disk.
 
@@ -423,7 +427,7 @@ Disk 1
 
 ---
 
-### Drive Letter
+#### Drive Letter
 
 Windows uses letters to identify volumes and partitions.
 
@@ -437,7 +441,7 @@ E:
 
 ---
 
-### Unallocated Space
+#### Unallocated Space
 
 **Unallocated space** is disk space that has not been assigned to a partition.
 
@@ -447,7 +451,7 @@ That space was then used to create the new **E:** partition.
 
 ---
 
-### Shrink Volume
+#### Shrink Volume
 
 **Shrink Volume** reduces the size of an existing partition and creates unallocated space.
 
@@ -461,13 +465,13 @@ was entered as the amount to shrink.
 
 ---
 
-### New Simple Volume
+#### New Simple Volume
 
 **New Simple Volume** is the Windows Disk Management option used to create a new partition from available unallocated space.
 
 ---
 
-### FAT32
+#### FAT32
 
 **FAT32** is a file system that can be selected when formatting a partition.
 
@@ -475,7 +479,7 @@ In this lab, the **E:** partition was formatted as FAT32.
 
 ---
 
-## Important Safety Concept: Formatting
+#### Important Safety Concept: Formatting
 
 Formatting a partition is destructive.
 
@@ -494,7 +498,7 @@ The lab specifically warns that formatting erases data.
 
 ---
 
-## GUI Workflow
+#### GUI Workflow
 
 The complete workflow from this lab can be summarized as:
 
@@ -529,8 +533,9 @@ FAT32
 ```
 
 ---
+---
 
-## Skills Demonstrated
+### Skills Demonstrated
 
 * Windows Disk Management
 * Disk partitioning
@@ -546,8 +551,9 @@ FAT32
 * Understanding destructive disk operations
 
 ---
+---
 
-## IT Support Relevance
+### IT Support Relevance
 
 Disk management is an important skill for an IT Support Specialist.
 
@@ -565,8 +571,9 @@ IT support professionals may need to:
 Understanding Disk Management also helps when troubleshooting storage-related issues in Windows.
 
 ---
+---
 
-## Cybersecurity Relevance
+### Cybersecurity Relevance
 
 Disk and partition management can also be relevant to cybersecurity.
 
